@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border: 3px solid green;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.parking-map {
+    position: relative;
+    margin: 0 auto;
+    width: 400px; /* Adjust as per your map image size */
+}
+
+.parking-map img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.selected-spot {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.selected-spot p {
+    font-size: 18px;
+}
+
+.selected-spot strong {
+    font-weight: bold;
+}
