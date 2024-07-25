@@ -9,13 +9,17 @@ app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res)=>{    
     res.render('index');
 });
 
-app.post('/carparkinglocation', (req, res)=>{
+app.post('/pakingspaces', (req, res)=>{
+    res.render('pakingspaces');
+});
+
+app.get('/carparkinglocation', (req, res)=>{
     res.render('carparkingslot');
 });
 

@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parking Spot Selection</title>
-<link rel="stylesheet" href="carparkingslot.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Big Image</title>
+    <link rel="stylesheet" href="/css/carparkingslot.css">
 </head>
 <body>
-<div class="container" style="text-align: center; border: 3px solid rgb(240, 244, 240);">
-    <h1>Your Parking Spot</h1>    
-    <img src="./image/carparkinglocation.png" loading="lazy">
-    <div class="parking-map"> 
-        <label for="locations">Select a location:</label>
-        <select id="locations" onchange="showLocation()">
-            <option value="new-york">New York</option>
-            <option value="los-angeles">Los Angeles</option>
-            <option value="chicago">Chicago</option>
-            <!-- Add more options as needed -->
-        </select>
+    <div>        
+        <div class="select-container"> 
+            <label for="locations">Select a location:</label>
+            <select class="custom-select" id="locations" onchange="showLocation()">
+                <option value="new-york">Downtown Parking Lot</option>
+                <option value="los-angeles">North Park Garage</option>
+                <option value="chicago">Eastside Mall Parking</option>
+                <option value="chicago">Central Business District</option>
+            </select>
+        </div>
+        <div class="image-container">
+            <img src="./image/carparkinglocation.png" alt="Big Image">
+        </div>
     </div>
-    <div class="selected-spot">
-        <p><strong>Selected Spot:</strong> <span id="selectedSpot">Surface Car Park</span></p>
-    </div>
-</div>
 </body>
 </html>

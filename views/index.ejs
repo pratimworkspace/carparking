@@ -3,40 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Car Parking Booking</title>
+<title>Car Parking Book</title>
 <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 <div class="container">
-    <h1>Car Parking Booking</h1>
-    <form action="/carparkinglocation" method="post">
+    <h1>Book Parking Space</h1>
+    <form action="/pakingspaces" method="post">
         <div class="form-group">
-            <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" name="fullname" required>
+            <input type="text" id="searchlocation" name="searchlocation" >
         </div>
         <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" >
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" >
-        </div>
-        <div class="form-group">
-            <label for="datetime">Date and Time:</label>
-            <input type="datetime-local" id="datetime" name="datetime" >
-        </div>
-        <div class="form-group">
-            <label for="parkingspot">Parking Spot:</label>
-            <select id="parkingspot" name="parkingspot" >
-                <option value="">Select spot...</option>
-                <option value="A1">A1</option>
-                <option value="A2">A2</option>
-                <option value="A3">A3</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <button type="submit">Book Now</button>
+            <button type="submit">Find Location</button>
         </div>
     </form>
 </div>

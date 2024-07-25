@@ -1,53 +1,81 @@
+/* Basic reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-}
-
-.container {
-    background-color: #fff;
+    height: 100vh;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    border: 3px solid green;
 }
 
-h1 {
-    margin-bottom: 20px;
-}
-
-.parking-map {
-    position: relative;
-    margin: 0 auto;
-    width: 400px; /* Adjust as per your map image size */
-}
-
-.parking-map img {
-    width: 100%;
+/* Image container styling */
+.image-container {
     max-width: 100%;
+    max-height: 100vh; /* Ensures the image does not exceed the viewport height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.selected-spot {
-    margin-top: 20px;
-    text-align: center;
+/* Image styling */
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    max-height: 100vh; /* Constrain image to viewport height */
+    object-fit: cover; /* Cover ensures the image covers the container without stretching */
 }
 
-.selected-spot p {
-    font-size: 18px;
+/* Select container styling */
+.select-container {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
 }
 
-.selected-spot strong {
-    font-weight: bold;
+/* Custom select box styling */
+.custom-select {
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* Remove default styling on WebKit browsers */
+    -moz-appearance: none; /* Remove default styling on Firefox */
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Add a custom arrow for the select box */
+.custom-select::after {
+    content: '▼'; /* Unicode for downward arrow */
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Style for the select box on focus */
+.custom-select:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none;
+}
+
+/* Ensure the custom arrow is positioned correctly */
+.select-container select {
+    padding-right: 40px; /* Space for the custom arrow */
 }
